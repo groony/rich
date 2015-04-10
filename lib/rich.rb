@@ -115,7 +115,7 @@ module Rich
 
 
     # update the language to the currently selected locale
-    editor_options[:language] = I18n.locale
+    editor_options[:language] = I18n.locale if editor_options[:language].blank?
 
     # remove the filebrowser if allow_document_uploads is false (the default)
     unless editor_options[:allow_document_uploads]
